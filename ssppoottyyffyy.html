@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    body {
+        background-color: rgb(75, 69, 69);
+    }
+    
+    header {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: black;
+        padding: 30px 0px 30px 51px;
+    }
+    
+    header .logo img {
+        width: 100px;
+        position: relative;
+        right: 20px;
+    }
+    
+    section {
+        background: linear-gradient(rgba(30, 1, 1, 0.9)0%, rgb(0, 0, 0)100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    section div.main {
+        margin: 100px 0;
+        padding: 100px;
+        width: 740px;
+        height: 920px;
+        background: #000000;
+        border-radius: 5px;
+    }
+    
+    section div.main h1 {
+        position: relative;
+        top: 20px;
+        right: 10px;
+        text-align: center;
+        margin: 45px 0px;
+        color: white;
+        font-size: 50px;
+    }
+    
+    section div.main.account-connect {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    section div.main .account-connect button {
+        position: relative;
+        left: 100px;
+        width: 320px;
+        text-align: center;
+        padding: 14px 28px;
+        outline: none;
+        margin: 5px 0px;
+        border-radius: 500px;
+        color: white;
+        background: transparent;
+        border: 2px solid #087a7a;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    section div.main .account-connect button img {
+        width: 23px;
+        float: left;
+        margin: 0px 10px;
+    }
+    
+    section div.main .account-connect button span {
+        position: relative;
+        top: 3px;
+    }
+    
+    hr {
+        /* position: relative;
+        top: 20px; */
+        margin: 30px;
+    }
+    
+    .main {
+        position: relative;
+        bottom: 50px;
+    }
+    
+    i {
+        color: white;
+        width: 23px;
+        float: left;
+        margin: 0px 10px;
+    }
+    
+    label {
+        color: white;
+        border-radius: 2px;
+    }
+    
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        font-weight: bold;
+        /* width: 300px; */
+        column-gap: 25px;
+    }
+    
+    .form label {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+    
+    .form input {
+        display: block;
+        padding: 15px;
+        width: 325px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        background: rgb(18, 18, 18);
+        outline: none;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        box-shadow: inset 0 0 0 1px #878787;
+        appearance: none;
+    }
+    
+    .switch {
+        margin: 0;
+        padding: 0;
+        /* visibility: hidden; */
+    }
+    
+    .switch input[type=checked] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    .switch label {
+        margin: 10px 0px 20px 0px;
+        cursor: pointer;
+        padding: 3px;
+        width: 32px;
+        height: 16px;
+        background: #727272;
+        display: block;
+        border-radius: 50em;
+        position: relative;
+        transition: .1s;
+        box-sizing: border-box;
+        right: 120px;
+        bottom: 15px;
+    }
+    
+    .switch label::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        border-radius: 50em;
+        transition: .1s;
+    }
+    
+    .switch input:active+label {
+        background-color: #727272;
+    }
+    
+    .switch input:checked+label {
+        background: #1ed760;
+    }
+    
+    .switch input:checked+label::after {
+        transform: translateX(calc(100%+5px));
+    }
+    
+    input#switch {
+        display: none;
+    }
+    
+    .switch span {
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+        position: relative;
+        /* left: 40px; */
+        right: 80px;
+        bottom: 54px;
+    }
+    
+    .log-in {
+        background-color: #1ed760;
+        border-radius: 30px;
+        font-weight: bold;
+        padding: 8px 12px;
+        height: 50px;
+        width: 325px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        position: relative;
+        bottom: 20px;
+    }
+    
+    .a1 {
+        color: white;
+        display: block;
+        text-align: center;
+        font-weight: 400;
+        text-decoration: underline;
+        position: relative;
+        bottom: 30px;
+        padding: 15px;
+    }
+    
+    .last {
+        margin: 10px 0;
+        text-align: center;
+        position: relative;
+        bottom: 50px;
+    }
+    
+    .last span {
+        color: rgb(248, 248, 209);
+        margin-right: 3px;
+    }
+    
+    .last a {
+        color: rgb(233, 230, 189);
+        text-decoration: underline;
+    }
+    
+    #log-in-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        /* justify-items: center; */
+    }
+    
+    .hr2 {
+        position: relative;
+        bottom: 50px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="ssppoottyyffyy.html">
+                <img src="imges/WhatsApp Image 2024-04-11 at 18.14.22_557fff83.jpg"></a>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <h1>log in to Spotify</h1>
+            <div class="account-connect">
+                <button class="a-c-btn" id="g"><i class="fa fa-google" style="font-size:24px"></i>
+                    <span>continue with google</span></button>
+                <button class="a-c-btn" id="f"><i class="fa fa-facebook-f" style="font-size:24px"></i>
+                    <span>continue with facebook</span></button>
+                <button class="a-c-btn" id="a"><i class="fa fa-apple" style="font-size:24px"></i><span>continue with apple</span></button>
+
+
+            </div>
+            <hr>
+            <div id="log-in-form">
+                <div class="form">
+                    <label>Email or Username</label>
+                    <input type="text" placeholder="Email or Username" class="e-u-in">
+                    <label>Password</label>
+                    <input type="text" placeholder="Password" class="e-u-in">
+                </div>
+                <div class="switch">
+                    <input type="checkbox" id="switch" checked>
+                    <label for="switch"></label>
+                    <span>Remember me</span>
+                </div>
+                <button class="log-in">Log In</button>
+            </div>
+            <a href="#" class="a1">Forgot your password?</a>
+            <hr class="hr2">
+            <div class="last">
+                <span>Don't you have an account?</span>
+                <a href="#">Sign up for Spotify</a>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
